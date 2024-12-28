@@ -48,7 +48,7 @@ TEST_SUITE("MATH") {
     }
 
     TEST_CASE("TESTING COMPLEX EXPRESSIONS") {
-        REQUIRE(CalcBrackets("(0+1)*(2+3)") == 6);
+        REQUIRE(CalcBrackets("(0+1)*(2+3)") == 5);
         REQUIRE(CalcBrackets("((0+1)^2)/(2+3)") == 0.1);
         REQUIRE(CalcBrackets("1+(2*(3+(4/5)))") == 8.6);
         CHECK_THROWS(CalcBrackets("3+((2*5)))))"));
