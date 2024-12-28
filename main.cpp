@@ -1,5 +1,5 @@
 #include <iostream>
-#include "calc.h"
+#include "calculator.h"
 
 using std::cin;
 using std::cout;

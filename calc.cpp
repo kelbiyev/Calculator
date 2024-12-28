@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "calculator.h"
 #include <stdexcept>
 
 using std::string;

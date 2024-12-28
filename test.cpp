@@ -1,21 +1,21 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-#include "calc.h"
+#include "calculator.h"
 
 TEST_SUITE("MATH") {
     TEST_CASE("TESTING ADDITION") {
         REQUIRE(CalcBrackets("1+1") == 2);
         CHECK(CalcBrackets("-1+1") == 0);
         CHECK(CalcBrackets("-4+1") == -3);
-        CHECK_THROWS(CalcBrackets("aaaa"));
+        CHECK_THROWS(CalcBrackets("abd"));
         CHECK_THROWS(CalcBrackets("   "));
     }
 
     TEST_CASE("TESTING SUBTRACTION") {
         CHECK(CalcBrackets("1-1") == 0);
         CHECK(CalcBrackets("-1-1") == -2);
-        CHECK(CalcBrackets("-4--4") == 0);
-        CHECK_THROWS(CalcBrackets("4..5-1"));
+        CHECK(CalcBrackets("-1--1") == 0);
+        CHECK_THROWS(CalcBrackets("3..2-1"));
     }
 
     TEST_CASE("TESTING DIVISION") {
