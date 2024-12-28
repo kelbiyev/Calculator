@@ -31,9 +31,13 @@ int main() {
         try {
             double result = CalcBrackets(str);
             cout << "Результат: " << result << "\n";
+        } catch (const std::invalid_argument& a) {
+            cout << "Ошибка: Выражение введено неверно"<<"\n";
         } catch (const std::exception& e) {
-            cout << e.what() << "\n";
+            cout << e.what() << "error"<<"\n";
         }
+
+
     }
 
     return 0;
